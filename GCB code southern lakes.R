@@ -8,7 +8,7 @@ latitudemean <- as.vector(tapply(scale(InvBel$Latfix), factor(InvBel$Lake), mean
 richmean <- as.vector(tapply(scale(InvBel$Richness), factor(InvBel$Lake), mean))
 ALKmean <- as.vector(tapply(log(InvBel$`Alk/Acid`), factor(InvBel$Lake), mean))
 TPmean <- as.vector(tapply(log(InvBel$`Tot-P`), factor(InvBel$Lake), mean))
-Tmean <- as.vector(tapply(scale(InvBel$Vattentemperatur), factor(InvBel$Lake), mean))
+Tmean <- as.vector(tapply(scale(InvBel$WaterTemp), factor(InvBel$Lake), mean))
 
 
 size <-log(InvBel$Size)
@@ -16,7 +16,7 @@ latitude <- scale(InvBel$Latfix)
 TP <- log(InvBel$`Tot-P`)
 Alk <- log(InvBel$`Alk/Acid`)
 Rich <- scale(InvBel$Richness)
-Temp <- scale(InvBel$Vattentemperatur)
+Temp <- scale(InvBel$WaterTemp)
 
 model <- "model{
 for(i in 1:n) {
