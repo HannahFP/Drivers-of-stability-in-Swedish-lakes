@@ -1,7 +1,7 @@
 require(rjags)
 require(MCMCglmm)
 
-#must first read in InvBel data file
+#must first read in InvBel data
 
 n.lakes<-57
 n.obs<-as.vector(table(factor(InvBel$Lake)))
