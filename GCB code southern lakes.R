@@ -1,6 +1,8 @@
 require(rjags)
 require(MCMCglmm)
 
+#must first read in InvBel data file
+
 n.lakes<-57
 n.obs<-as.vector(table(factor(InvBel$Lake)))
 sizemean<-as.vector(tapply(log(InvBel$Size), factor(InvBel$Lake), mean))
